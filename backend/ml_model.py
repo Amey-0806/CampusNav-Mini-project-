@@ -16,14 +16,11 @@ class SimpleChatbotML:
         training_sentences = []
         training_labels = []
         
-        # We also need a fallback/greeting intent
         greeting_phrases = ["hello", "hi", "hey", "help", "what can you do", "who are you"]
         for phrase in greeting_phrases:
             training_sentences.append(phrase)
             training_labels.append("greeting")
             
-        # Generate varied phrases for each location
-        # questions about location, floor, description, features, landmarks, etc.
         templates = [
             "where is the {}",
             "how do i go to the {}",
@@ -47,14 +44,12 @@ class SimpleChatbotML:
             for n in names:
                 for t in templates:
                     training_sentences.append(t.format(n.lower()))
-                    training_labels.append(loc['name'])  # The intent is the location itself!
+                    training_labels.append(loc['name'])
             
-            # Train the model on the location's description so it learns contextual words
             if 'description' in loc:
                 training_sentences.append(loc['description'].lower())
                 training_labels.append(loc['name'])
                 
-            # Train the model on the location's features
             if 'features' in loc:
                 for feature in loc['features']:
                     training_sentences.append(f"place with {feature.lower()}")
@@ -69,12 +64,14 @@ class SimpleChatbotML:
         
     def predict(self, text):
         X_test = self.vectorizer.transform([text])
+        
+        if X_test.nnz == 0:
+            return "unknown"
+            
         prediction = self.classifier.predict(X_test)[0]
         
-        # Determine confidence via decision function distance
         decision = self.classifier.decision_function(X_test)
         
-        # Very simple threshold to filter out unrelated chatter
         if len(decision.shape) > 1:
             confidence = np.max(decision)
             if confidence < 0.1:  
@@ -93,7 +90,6 @@ class SimpleChatbotML:
             loc = self.location_dict[intent]
             text_lower = text.lower()
             
-            # Simple keyword matching for query type
             if any(word in text_lower for word in ["feature", "facility", "facilities", "have", "inside"]):
                 features = ", ".join(loc.get('features', []))
                 return f"{loc['name']} features: {features}." if features else f"I don't have specific feature information for {loc['name']}."
@@ -105,8 +101,9 @@ class SimpleChatbotML:
             elif any(word in text_lower for word in ["category", "type", "kind"]):
                 return f"{loc['name']} is categorized as: {loc.get('category', 'unknown')}."
             
-            # Default response includes a summary of the new info
-            response = f"{loc['name']} is on the {loc['floor']} floor. {loc['description']}"
+            floor_info = loc.get('floor', 'an unknown')
+            desc_info = loc.get('description', '')
+            response = f"{loc['name']} is on the {floor_info} floor. {desc_info}"
             
             extra_info = []
             if loc.get('landmarks'):

@@ -73,13 +73,10 @@ function removeTypingIndicator() {
     }
 }
 
-// GitHub Actions will inject the real backend URL during deployment.
-// If it's not injected (like during local development), it defaults to localhost.
 let API_URL = '{{API_URL}}';
 if (API_URL.startsWith('{{')) {
     API_URL = 'http://127.0.0.1:8000/chat';
 } else if (!API_URL.endsWith('/chat')) {
-    // Safety check: automatically append /chat if missing from GitHub Secret
     API_URL += API_URL.endsWith('/') ? 'chat' : '/chat';
 }
 
