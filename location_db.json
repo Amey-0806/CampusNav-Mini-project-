@@ -6,7 +6,10 @@
       "lib",
       "study hall",
       "reading room",
-      "central library"
+      "central library",
+      "university library",
+      "main library",
+      "library"
     ],
     "category": "academic",
     "floor": "2nd",
@@ -18,15 +21,18 @@
       "Reference section",
       "Digital catalog"
     ],
-    "description": "Located on the 2nd floor near the Admin Block. Serves as the primary academic resource center for the university."
+    "description": "Situated on the second floor adjacent to the Admin Block. Serves as the primary academic resource center for the university community."
   },
   {
     "id": "canteen-main",
-    "name": "Canteen",
+    "name": "Main Canteen",
     "aliases": [
       "food court",
       "cafeteria",
-      "main canteen"
+      "main canteen",
+      "the canteen",
+      "university canteen",
+      "mess canteen"
     ],
     "category": "food",
     "floor": "ground",
@@ -38,14 +44,17 @@
       "Food stalls",
       "Seating area"
     ],
-    "description": "Ground floor canteen situated near the playground and in front of the Basketball Court."
+    "description": "Ground floor dining facility located adjacent to the Playground and in front of the Basketball Court."
   },
   {
     "id": "court-volleyball",
     "name": "Volleyball Court",
     "aliases": [
       "volleyball ground",
-      "volley court"
+      "volley court",
+      "volleyball arena",
+      "vball court",
+      "vb court"
     ],
     "category": "sports",
     "floor": "ground",
@@ -55,14 +64,17 @@
     "features": [
       "Outdoor volleyball court"
     ],
-    "description": "Outdoor volleyball court located beside the Information Technology Building."
+    "description": "Outdoor volleyball court located adjacent to the Information Technology Building."
   },
   {
     "id": "court-basketball",
     "name": "Basketball Court",
     "aliases": [
       "basketball ground",
-      "ball court"
+      "ball court",
+      "basketball arena",
+      "bb court",
+      "b-ball court"
     ],
     "category": "sports",
     "floor": "ground",
@@ -73,15 +85,19 @@
     "features": [
       "Outdoor basketball court"
     ],
-    "description": "Outdoor basketball court situated in front of the Canteen and beside the Boys Hostel."
+    "description": "Outdoor basketball court located in front of the Canteen and beside the Boys Hostel."
   },
   {
     "id": "mess-boys",
-    "name": "Mess",
+    "name": "Boys Mess",
     "aliases": [
       "dining hall",
       "hostel mess",
-      "canteen mess"
+      "canteen mess",
+      "boys dining",
+      "mess hall",
+      "hostel dining",
+      "boys restaurant"
     ],
     "category": "hostel",
     "floor": "ground & 1st",
@@ -97,13 +113,18 @@
       "Boys Gymnasium (ground floor)",
       "Badminton Court (1st floor)"
     ],
-    "description": "Multi-floor facility near the Futsal Turf and beside the Boys Gymnasium, at the backyard of the Boys Hostel. Ground floor houses table tennis, carrom, and the boys gym; first floor has a badminton court."
+    "description": "Multi-floor dining facility adjacent to the Futsal Turf and Boys Gymnasium, located at the backyard of the Boys Hostel. The ground floor houses table tennis, carrom, and gym facilities; the first floor features a badminton court."
   },
   {
     "id": "gymnasium-boys",
     "name": "Boys Gymnasium",
     "aliases": [
-      "boys gym"
+      "boys gym",
+      "gym",
+      "gymnasium",
+      "boys gymkhana",
+      "hostel gym",
+      "university gym"
     ],
     "category": "sports",
     "floor": "ground & 1st",
@@ -117,7 +138,7 @@
       "Carrom (ground floor)",
       "Badminton Court (1st floor)"
     ],
-    "description": "Located behind the Boys Hostel. Shares the building with the Mess. Ground floor includes gym equipment, table tennis, and carrom; first floor features a badminton court."
+    "description": "Sports facility located behind the Boys Hostel, sharing premises with the Mess. Ground floor includes gym equipment, table tennis, and carrom; first floor features a badminton court."
   },
   {
     "id": "court-pickleball",
@@ -125,7 +146,9 @@
     "aliases": [
       "pickle court",
       "pickleball ground",
-      "pickle ball court"
+      "pickle ball court",
+      "pickleball arena",
+      "pb court"
     ],
     "category": "sports",
     "floor": "ground",
@@ -137,7 +160,7 @@
     "features": [
       "Outdoor pickleball court"
     ],
-    "description": "Outdoor pickleball court beside the Futsal Turf, near the Boys Hostel and parking area."
+    "description": "Outdoor pickleball court located adjacent to the Futsal Turf, near the Boys Hostel and Parking Area."
   },
   {
     "id": "ground-playing",
@@ -146,7 +169,11 @@
       "EN ground",
       "sports ground",
       "pratishruti ground",
-      "main ground"
+      "main ground",
+      "university ground",
+      "campus ground",
+      "open ground",
+      "sports arena"
     ],
     "category": "sports",
     "floor": "ground",
@@ -157,16 +184,22 @@
       "Multi-sport open ground",
       "Pratishruti event venue"
     ],
-    "description": "Open playing ground behind the Electronics and Electrical Science Building. Serves as the primary venue for the annual Pratishruti cultural event."
+    "description": "Open multi-sport ground located behind the Electronics and Electrical Science Building. Serves as the primary venue for the annual Pratishruti cultural event."
   },
   {
     "id": "oat",
-    "name": "OAT",
+    "name": "Open Air Theatre (OAT)",
     "aliases": [
       "open air theatre",
       "open air theater",
       "amphitheatre",
-      "open auditorium"
+      "amphitheater",
+      "open auditorium",
+      "auditorium",
+      "theatre",
+      "outdoor theatre",
+      "OAT",
+      "open theatre"
     ],
     "category": "facility",
     "floor": "ground",
@@ -178,7 +211,7 @@
       "Open-air seating",
       "Stage / performance area"
     ],
-    "description": "Open Air Theatre located between the Electronics and Electrical Science Building and the Applied Science Building. Used for outdoor events, performances, and gatherings."
+    "description": "Open Air Theatre situated between the Electronics and Electrical Science Building and the Applied Science Building. Serves as a venue for outdoor events, performances, and gatherings."
   },
   {
     "id": "outlet-amul",
@@ -187,7 +220,10 @@
       "amul",
       "amul stall",
       "amul kiosk",
-      "amul shop"
+      "amul shop",
+      "amul dairy",
+      "amul ice cream",
+      "dairy outlet"
     ],
     "category": "food",
     "floor": "ground",
@@ -199,15 +235,18 @@
       "Ice cream",
       "Cold beverages"
     ],
-    "description": "Amul franchise outlet situated in front of the Electronics and Electrical Science Building."
+    "description": "Amul franchise outlet located in front of the Electronics and Electrical Science Building."
   },
   {
     "id": "outlet-snackify",
-    "name": "Snackify",
+    "name": "Snackify Outlet",
     "aliases": [
+      "snackify",
       "snackify outlet",
       "snackify stall",
-      "snackify shop"
+      "snackify shop",
+      "snacks shop",
+      "quick bites"
     ],
     "category": "food",
     "floor": "ground",
@@ -220,7 +259,7 @@
       "Beverages",
       "Quick bites"
     ],
-    "description": "Snackify outlet in front of the Information Technology Building, beside the Applied Science Building."
+    "description": "Snackify outlet located in front of the Information Technology Building, adjacent to the Applied Science Building."
   },
   {
     "id": "building-it",
@@ -228,7 +267,11 @@
     "aliases": [
       "IT building",
       "IT block",
-      "IT dept"
+      "IT dept",
+      "IT department",
+      "Information Technology dept",
+      "IT",
+      "IT wing"
     ],
     "category": "academic",
     "floor": "ground–top",
@@ -241,7 +284,7 @@
       "Classrooms (all floors)",
       "Computer labs (2nd floor)"
     ],
-    "description": "Academic block for the IT department, situated in front of Digital Tower and near the Volleyball Court. Classrooms span all floors; dedicated computer labs are on the 2nd floor."
+    "description": "Academic facility for the Information Technology department, located in front of the Digital Tower and near the Volleyball Court. Classrooms are available on all floors; computer labs are situated on the second floor."
   },
   {
     "id": "building-digital-tower",
@@ -249,7 +292,11 @@
     "aliases": [
       "DT",
       "digital block",
-      "the tower"
+      "the tower",
+      "digital tower building",
+      "DT building",
+      "ten storey tower",
+      "ten floor tower"
     ],
     "category": "academic",
     "floor": "underground–10th (excluding parking floor)",
@@ -264,7 +311,7 @@
       "Underground floor (labs & classes)",
       "Parking floor (no academic use)"
     ],
-    "description": "Prominent 10-floor academic tower in front of the IT Building and near Snackify. Houses labs and classrooms from the underground level through all 10 floors, with the parking floor excluded from academic use."
+    "description": "Ten-floor academic tower located in front of the IT Building and near Snackify. Houses laboratories and classrooms from the underground level through the tenth floor. The parking floor is reserved for vehicle parking and is not used for academic purposes."
   },
   {
     "id": "building-mba",
@@ -273,7 +320,11 @@
       "MBA block",
       "management building",
       "MBA dept",
-      "management block"
+      "MBA department",
+      "management block",
+      "management school",
+      "MBA",
+      "MBA wing"
     ],
     "category": "academic",
     "floor": "ground–top",
@@ -287,16 +338,20 @@
       "MBA Auditorium (1st floor)",
       "Library (2nd floor)"
     ],
-    "description": "Management school building situated in front of the Central Library, near the main entrance of Ramdeobaba University. Hosts the MBA Auditorium on the 1st floor and a dedicated library on the 2nd floor."
+    "description": "Management school building located in front of the Central Library, near the main university entrance. The MBA Auditorium is situated on the first floor and the library is on the second floor."
   },
   {
     "id": "outlet-novelty",
-    "name": "Novelty",
+    "name": "Novelty Store",
     "aliases": [
+      "novelty",
       "novelty store",
       "novelty shop",
       "novelty outlet",
-      "novelty stall"
+      "novelty stall",
+      "stationery shop",
+      "general store",
+      "daily needs store"
     ],
     "category": "food",
     "floor": "ground",
@@ -309,7 +364,7 @@
       "Stationery",
       "Snacks"
     ],
-    "description": "General store / outlet situated directly beside the MBA Building and near the Digital Tower parking area."
+    "description": "General store located adjacent to the MBA Building and near the Digital Tower parking area."
   },
   {
     "id": "building-en",
@@ -320,7 +375,11 @@
       "Electronics building",
       "Electrical building",
       "EE building",
-      "EN dept"
+      "EN dept",
+      "EN department",
+      "Electronics and Electrical dept",
+      "E&E building",
+      "EN"
     ],
     "category": "academic",
     "floor": "ground–top",
@@ -334,7 +393,7 @@
       "Laboratories (all floors)",
       "EN Auditorium (3rd floor)"
     ],
-    "description": "Academic block for the Electronics and Electrical Science department. Located near the EN Playing Ground, in front of the Amul Outlet, and beside the OAT. Equipped with labs and classrooms on every floor; the EN Auditorium is on the 3rd floor."
+    "description": "Academic facility for the Electronics and Electrical Science department, located near the Playing Ground, in front of the Amul Outlet, and beside the OAT. Equipped with laboratories and classrooms on all floors; the EN Auditorium is situated on the third floor."
   },
   {
     "id": "hostel-boys",
@@ -342,7 +401,12 @@
     "aliases": [
       "boys residence",
       "hostel",
-      "boys dorm"
+      "boys dorm",
+      "boys dormitory",
+      "hostel building",
+      "male hostel",
+      "ug boys hostel",
+      "undergraduate boys hostel"
     ],
     "category": "hostel",
     "floor": "ground–top",
@@ -360,7 +424,7 @@
       "Futsal Turf (nearby)",
       "Basketball Court (nearby)"
     ],
-    "description": "Primary residential facility for male students. Situated in front of the MCA Building, positioned between the Volleyball Court, Pickleball Court, and Futsal Turf. Equipped with all standard hostel amenities; the Mess and Boys Gymnasium are located in the adjacent building at the backyard."
+    "description": "Primary residential facility for male students. Located in front of the MCA Building, adjacent to the Volleyball Court, Pickleball Court, and Futsal Turf. Equipped with standard hostel amenities; the Mess and Boys Gymnasium are situated in the adjacent building at the backyard."
   },
   {
     "id": "building-mca",
@@ -368,7 +432,10 @@
     "aliases": [
       "MCA block",
       "MCA dept",
-      "master of computer applications building"
+      "MCA department",
+      "master of computer applications building",
+      "MCA",
+      "MCA wing"
     ],
     "category": "academic",
     "floor": "ground–top",
@@ -382,6 +449,6 @@
       "Classrooms",
       "Computer labs"
     ],
-    "description": "Academic block for the MCA (Master of Computer Applications) department. Located near the parking area and Volleyball Court, beside the Playing Ground, and directly in front of the Boys Hostel."
+    "description": "Academic facility for the Master of Computer Applications (MCA) department, located near the Parking Area and Volleyball Court, adjacent to the Playing Ground, and in front of the Boys Hostel."
   }
 ]

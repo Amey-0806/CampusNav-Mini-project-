@@ -3,6 +3,22 @@ const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
 const userMenuBtn = document.getElementById('userMenuBtn');
 const dropdownMenu = document.getElementById('dropdownMenu');
+const themeToggle = document.getElementById('themeToggle');
+const themeLabel = document.getElementById('themeLabel');
+
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+themeLabel.textContent = savedTheme === 'dark' ? 'Light mode' : 'Dark mode';
+
+themeToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    themeLabel.textContent = next === 'dark' ? 'Light mode' : 'Dark mode';
+    dropdownMenu.classList.remove('show');
+});
 
 userMenuBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -36,6 +52,13 @@ function addMessage(text, sender) {
 
     const content = document.createElement('div');
     content.className = 'msg-content';
+
+    if (sender === 'bot') {
+        const avatar = document.createElement('div');
+        avatar.className = 'bot-avatar';
+        avatar.textContent = 'CN';
+        content.appendChild(avatar);
+    }
 
     const msgText = document.createElement('div');
     msgText.className = 'msg-text';
@@ -92,15 +115,15 @@ async function sendMsg() {
     showTypingIndicator();
 
     try {
-        const fetchPromise = fetch(API_URL, {
+        const res = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: text })
         });
 
-        const timeoutPromise = new Promise(res => setTimeout(res, 800));
-
-        const [res] = await Promise.all([fetchPromise, timeoutPromise]);
+        if (!res.ok) {
+            throw new Error(`Server error: ${res.status}`);
+        }
 
         const data = await res.json();
         removeTypingIndicator();

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CampusNav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./logo.ico" />
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <style>
+        .about-body {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 30px 24px;
+            overflow-y: auto;
+        }
+
+        .article {
+            max-width: 680px;
+            width: 100%;
+            padding-top: 40px;
+        }
+
+        .article-header {
+            margin-bottom: 48px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .article-subtitle {
+            font-size: 22px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 32px;
+        }
+
+        .article-byline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .byline-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .byline-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .byline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            min-width: 0;
+        }
+
+        .byline-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .byline-meta {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .article-divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
+
+        .article-section {
+            margin-bottom: 36px;
+        }
+
+        .article-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
+
+        .article-section p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .article-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #10a37f;
+            background: rgba(16, 163, 127, 0.1);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+
+        .article-footer {
+            margin-top: 56px;
+            padding-top: 32px;
+        }
+
+        .article-footer a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #10a37f;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .article-footer a:hover {
+            opacity: 0.75;
+        }
+
+        @media (max-width: 640px) {
+            .article-title {
+                font-size: 32px;
+            }
+
+            .article-subtitle {
+                font-size: 18px;
+            }
+
+            .article-byline {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-subtitle {
+                font-size: 16px;
+            }
+
+            .article-byline {
+                grid-template-columns: 1fr;
+            }
+
+            .about-body {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <main class="chat-area">
+            <div class="about-body">
+                <article class="article">
+                    <header class="article-header">
+                        <span class="article-tag">Mini Project</span>
+                        <h1 class="article-title">CampusNav</h1>
+                        <p class="article-subtitle">
+                            An intelligent campus navigation assistant for Ramdeobaba University,
+                            powered by machine learning and natural language.
+                        </p>
+                        <div class="article-byline">
+                            <div class="byline-card">
+                                <div class="byline-avatar">AB</div>
+                                <div class="byline-info">
+                                    <span class="byline-name">Amey Bobade</span>
+                                    <span class="byline-meta">RBU University</span>
+                                </div>
+                            </div>
+                            <div class="byline-card">
+                                <div class="byline-avatar">SS</div>
+                                <div class="byline-info">
+                                    <span class="byline-name">Siddhant Singh</span>
+                                    <span class="byline-meta">RBU University</span>
+                                </div>
+                            </div>
+                            <div class="byline-card">
+                                <div class="byline-avatar">YS</div>
+                                <div class="byline-info">
+                                    <span class="byline-name">Yash Sathone</span>
+                                    <span class="byline-meta">RBU University</span>
+                                </div>
+                            </div>
+                            <div class="byline-card">
+                                <div class="byline-avatar">PS</div>
+                                <div class="byline-info">
+                                    <span class="byline-name">Pranay Sing Sisodiya</span>
+                                    <span class="byline-meta">RBU University</span>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="article-divider"></div>
+
+                    <section class="article-section">
+                        <h2>What is CampusNav?</h2>
+                        <p>
+                            CampusNav is an intelligent chatbot that helps users navigate and discover
+                            information about Ramdeobaba University. Ask questions naturally — in plain English —
+                            and get instant answers about campus locations, facilities, and landmarks.
+                        </p>
+                        <p>
+                            Unlike a traditional directory, CampusNav understands varied phrasings. Whether you
+                            type "where's the library", "what floor is the canteen on", or "tell me about the
+                            mess", the system recognizes your intent and returns the relevant information.
+                        </p>
+                    </section>
+
+                    <section class="article-section">
+                        <h2>How It Works</h2>
+                        <p>
+                            CampusNav uses a TF-IDF vectorizer to convert user queries into numerical
+                            features, which are then classified using a Linear SVM classifier against a
+                            structured location database. The model is trained on varied query templates
+                            and location aliases to handle natural language flexibility.
+                        </p>
+                        <p>
+                            The backend is built with FastAPI, serving the ML model over a simple REST API.
+                            The frontend is a single-page application with a clean, responsive chat interface.
+                        </p>
+                    </section>
+
+                    <section class="article-section">
+                        <h2>Tech Stack</h2>
+                        <p>
+                            Python &nbsp;&middot;&nbsp; FastAPI &nbsp;&middot;&nbsp; scikit-learn &nbsp;&middot;&nbsp;
+                            HTML &nbsp;&middot;&nbsp; CSS &nbsp;&middot;&nbsp; JavaScript &nbsp;&middot;&nbsp; JSON
+                        </p>
+                    </section>
+
+                    <div class="article-divider"></div>
+
+                    <footer class="article-footer">
+                        <a href="index.html">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Back to Chat
+                        </a>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

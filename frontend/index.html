@@ -34,6 +34,23 @@
                         </svg>
                     </button>
                     <div class="dropdown-menu" id="dropdownMenu">
+                        <button class="dropdown-item" id="themeToggle">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <span id="themeLabel">Dark mode</span>
+                        </button>
+                        <div class="dropdown-divider"></div>
                         <button class="dropdown-item" onclick="location.reload()">
                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
                                 stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
@@ -44,7 +61,16 @@
                             New chat
                         </button>
                         <div class="dropdown-divider"></div>
-                        <button class="dropdown-item">About</button>
+                        <button class="dropdown-item" onclick="location.href='about.html'">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            About
+                        </button>
                     </div>
                 </div>
             </header>
@@ -57,8 +83,7 @@
                     <div class="input-box">
                         <textarea id="userInput" placeholder="Message Campus AI..." rows="1"></textarea>
                         <button id="sendBtn" class="send-btn" onclick="sendMsg()">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                class="text-white dark:text-black">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
