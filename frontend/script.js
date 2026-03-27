@@ -55,8 +55,6 @@ function addMessage(text, sender) {
 
     if (sender === 'bot') {
         const avatar = document.createElement('div');
-        avatar.className = 'bot-avatar';
-        avatar.textContent = 'CN';
         content.appendChild(avatar);
     }
 
